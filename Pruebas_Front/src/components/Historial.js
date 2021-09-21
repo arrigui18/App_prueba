@@ -10,7 +10,6 @@ function Historial() {
 
     const consumoGET = () => {
         HistorialGET().then(response => {
-            debugger
             setData(response.data);
         })
     }

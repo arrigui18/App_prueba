@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api_key_tiempo = "9d7a00f7b2d5a4fd2bd3dd208d105e8b";
 const api_key_noticias = "88e0eeb2b1794a469077c2856baf1af5";
-const baseUrl = ('http://localhost/ARRIGUI/prueba/PHP/history.php');
+const baseUrl = ('http://localhost/ARRIGUI/App_Prueba/PHP/history.php');
 
 export const ConsumoTiempo = async(data) => {
     return await axios
@@ -38,6 +38,8 @@ export const ConsumoNoticias = async(data) => {
             console.log(error)
         });
 }
+
+// Se realiza consumo para traer todos los registros de la tabla History
 export const HistorialGET = () => {
     return axios
         .get(`${baseUrl}`)
@@ -49,6 +51,7 @@ export const HistorialGET = () => {
         });
 }
 
+// Se realiza insercion de la CIUDAD e INFO mediante POST
 export const HistoryPOST = async(data) => {
     return await axios
         .post(`${baseUrl}`, data)
